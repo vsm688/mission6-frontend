@@ -8,6 +8,11 @@ export const StyledFormParentDiv = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-bottom: 50px;
+    h1,h2,h3,h4,p,li,input,select, option, button{
+        font-family: 'Inter';
+        font-style: normal;
+    }
 `
 
 export const StyledRentalBanner = styled.div`
@@ -20,6 +25,7 @@ export const StyledRentalBanner = styled.div`
     align-items: center;
     font-size: 40px;
     color: #FFFFFF;
+    font-family:  "Inter";
 `
 
 export const StyledSearchForm = styled.form`

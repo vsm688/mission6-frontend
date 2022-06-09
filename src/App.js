@@ -1,7 +1,8 @@
-import NavBar from "./components/navbar/NavBar";
+
 import GlobalStyle from "./global/globalStyle";
-import Form from "./components/form/Form";
-import PropertyInfo from "./components/propertyInfo/PropertyInfo";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import SearchResults from "./pages/SearchResults";
 function App() {
 
   // const callBackEnd = () => {
@@ -25,9 +26,13 @@ function App() {
 
     <>
       <GlobalStyle></GlobalStyle>
-      <NavBar></NavBar>
-      <Form></Form>
-      <PropertyInfo></PropertyInfo>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/searchresults" element={<SearchResults/>}></Route>
+      </Routes>
+    </BrowserRouter>
+     
     </>
     // <>
     //   <button onClick={() => callBackEnd()}>click</button>

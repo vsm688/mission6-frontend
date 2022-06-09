@@ -2,13 +2,14 @@ import React from 'react'
 import { StyledHeader, StyledHeaderItemContainer, StyledHeaderItemContainerList, 
     StyledHeaderItemContainerListItem, StyledHeaderItemContainerListItemLogo, NavBarParent,
     BannerImage } from '../styled/NavBar.styled'
-const NavBar = () => {
+const NavBar = (props) => {
+    console.log(props);
     return (
         <StyledHeader>
             <NavBarParent>
                 <StyledHeaderItemContainer>
                     <StyledHeaderItemContainerList left={true}>
-                        <StyledHeaderItemContainerListItemLogo><img src={"./svg/logos/logo.svg"}></img></StyledHeaderItemContainerListItemLogo>
+                        <StyledHeaderItemContainerListItemLogo><img src={"./svg/logos/logo.svg"} alt={"logo"}></img></StyledHeaderItemContainerListItemLogo>
                         <StyledHeaderItemContainerListItem>Residential</StyledHeaderItemContainerListItem>
                         <StyledHeaderItemContainerListItem>Commercial</StyledHeaderItemContainerListItem>
                         <StyledHeaderItemContainerListItem>Body Corperate</StyledHeaderItemContainerListItem>
@@ -23,7 +24,7 @@ const NavBar = () => {
                     </StyledHeaderItemContainerList>
                 </StyledHeaderItemContainer>
             </NavBarParent>
-            <BannerImage src={"/svg/banner.svg"}>
+            <BannerImage displayed={props.displayed} src={"/svg/banner.svg"}>
             </BannerImage>
         </StyledHeader>
     )

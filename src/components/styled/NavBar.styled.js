@@ -8,6 +8,10 @@ export const StyledHeader = styled.header`
     margin-top: 20px;
     height: auto;
     flex-direction: column;
+    h1,h2,h3,h4,p,li{
+        font-family: 'Inter';
+        font-style: normal;
+    }
 `
 
 export const NavBarParent = styled.div`
@@ -30,7 +34,7 @@ export const StyledHeaderItemContainerList = styled.ul`
     align-items: center;
     margin:0;
     padding: 0;
-    justify-content: ${props => props.left ? "flex-start": "flex-end"};
+    justify-content: ${props => props.left ? "flex-start" : "flex-end"};
 `
 
 export const StyledHeaderItemContainerListItem = styled.li`
@@ -46,5 +50,5 @@ export const StyledHeaderItemContainerListItemLogo = styled.li`
 `
 
 export const BannerImage = styled.img`
-    
+    height: ${(props) => props.displayed === "yes" ? "auto": 0}
 `

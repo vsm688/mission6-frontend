@@ -7,7 +7,7 @@ import {
     StyledinputHolder, StyledinputHolderWithText, StyledInputPriceFields, StyledPriceDivHolder, StyledBedRoomInputHolder, StyledinputHolderBathRoom, StyledPetsAndAvailableButtons
     ,StyledSearchButtonContainer
 } from '../styled/Form.styled'
-import { set } from 'mongoose';
+
 
 
 const Form = () => {
