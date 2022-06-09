@@ -7,10 +7,12 @@ import {
     StyledinputHolder, StyledinputHolderWithText, StyledInputPriceFields, StyledPriceDivHolder, StyledBedRoomInputHolder, StyledinputHolderBathRoom, StyledPetsAndAvailableButtons
     ,StyledSearchButtonContainer
 } from '../styled/Form.styled'
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Form = () => {
+  
     const [formState, setFormState] = useState("");
     const [suburbState, setSuburbState] = useState("");
     const [suburbArrayState, setsuburbArrayState] = useState(null);
@@ -19,6 +21,13 @@ const Form = () => {
 
     const [selectedCheckBox, setSelectedCheckBox] = useState([]);
 
+    const navigate = useNavigate();
+
+    const redirectToSearchResults = (event) =>{
+        event.preventDefault();
+        navigate("/searchresults")
+
+    }
 
     const checktheCheckBox = (item) => {
         if (!selectedCheckBox.includes(item)) {
@@ -236,7 +245,7 @@ const Form = () => {
                 </StyledBottomForm>
             </StyledSearchForm>
             <StyledSearchButtonContainer>
-                <button>Search</button>
+                <button onClick={(event) => redirectToSearchResults(event)} >Search</button>
             </StyledSearchButtonContainer>
 
         </StyledFormParentDiv >

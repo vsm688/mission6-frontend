@@ -39,6 +39,14 @@ export const StyledHeaderItemContainerList = styled.ul`
 
 export const StyledHeaderItemContainerListItem = styled.li`
     margin: 0 20px;
+    border-bottom: ${(props) => props.right !== true ? "3px solid #d5788b" : "none" }; 
+    font-size: ${(props) => props.right !== true ? "15px" : "14px" }; 
+    border-radius: 6px;
+    cursor: pointer;
+    img{
+        cursor: pointer;
+    }
+
 `
 
 
@@ -47,6 +55,7 @@ export const StyledHeaderItemContainerListItemLogo = styled.li`
         width: 150px;
         height: 150px;
     }
+    cursor: pointer;
 `
 
 export const BannerImage = styled.img`

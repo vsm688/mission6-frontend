@@ -72,6 +72,7 @@ export const StyledSearchResultItem = styled.div`
         font-style: normal;
         color: white;
     }
+    height: 330px;
     
     
 `
