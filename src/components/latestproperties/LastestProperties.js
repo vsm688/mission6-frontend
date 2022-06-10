@@ -74,12 +74,15 @@ const LastestProperties = () => {
                                             <p>{item.Bedrooms}</p>
                                         </span>
                                         <span style={{ "display": "flex" }}>
-                                            <img src={"./svg/icons/bathroom.svg"} alt={"house"}></img>
+                                            <img src={"./svg/icons/bathroom.svg"} alt={"bathroom"}></img>
                                             <p>{item.Bathrooms}</p>
                                         </span>
                                         <span style={{ "display": "flex" }}>
-                                            <img src={"./svg/icons/garage.svg"} alt={"house"}></img>
+                                            <img src={"./svg/icons/garage.svg"} alt={"garage"}></img>
                                             <p>{item.Garages}</p>
+                                        </span>
+                                        <span style={{"display":"flex","alignItems":"center"}} >
+                                            {item.PetsAllowed === true ? <img src={"./svg/icons/reddog.svg"} alt={"dog"}/> : <div></div>}
                                         </span>
                                     </div>
                                     <div style={{"display":"flex", "alignItems":"center"}}>
